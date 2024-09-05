@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 export default function Header() {
   return (
@@ -10,7 +11,6 @@ export default function Header() {
                     <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
                 </a>
                 <div className="flex items-center space-x-6 rtl:space-x-reverse">
-                    <a href="tel:5541251234" className="text-sm  text-gray-500 dark:text-white hover:underline">(555) 412-1234</a>
                     <a href="#" className="text-sm  text-blue-600 dark:text-blue-500 hover:underline">Login</a>
                 </div>
             </div>
@@ -20,16 +20,13 @@ export default function Header() {
                 <div className="flex items-center">
                     <ul className="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
                         <li>
-                            <a href="#" className="text-gray-900 dark:text-white hover:underline" aria-current="page">Home</a>
+                            <Link href={'/dashboard'} className='text-white'>Home</Link>
                         </li>
                         <li>
-                            <a href="#" className="text-gray-900 dark:text-white hover:underline">Company</a>
+                            <Link href={'/berita'} className='text-white'>Berita</Link>
                         </li>
                         <li>
-                            <a href="#" className="text-gray-900 dark:text-white hover:underline">Team</a>
-                        </li>
-                        <li>
-                            <a href="#" className="text-gray-900 dark:text-white hover:underline">Features</a>
+                           <Link href={'/pendaftaran'} className='text-white'>Pendaftaran</Link> 
                         </li>
                     </ul>
                 </div>
